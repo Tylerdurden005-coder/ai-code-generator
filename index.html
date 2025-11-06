@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-Powered Code Generator for ML, DL, NLP, Web Development, and DSA Problems">
+    <meta name="keywords" content="AI, Code Generator, Machine Learning, Deep Learning, NLP, DSA Solver">
+    <meta name="author" content="AI Code Generator Team">
+    <title>AI Code Generator & Problem Solver - ML | DL | NLP | DSA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <div class="particle-container" id="particles"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <span class="logo-text">AI CodeGen<span class="logo-accent">Pro</span></span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+                    <li class="nav-item"><a href="#generator" class="nav-link">Generator</a></li>
+                    <li class="nav-item"><a href="#documentation" class="nav-link">Docs</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="btn btn-primary">Get Started</button>
+                </div>
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-sparkles"></i>
+                    <span>Powered by Advanced AI Models</span>
+                </div>
+                <h1 class="hero-title">
+                    Generate <span class="gradient-text">Any Code</span> with AI
+                </h1>
+                <p class="hero-subtitle">
+                    From Machine Learning models to Web Applications, DSA solutions to NLP pipelines - 
+                    Generate production-ready code in seconds with our advanced AI-powered platform.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Projects Generated</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Code Templates</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Accuracy Rate</div>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <button class="btn btn-large btn-primary" onclick="scrollToGenerator()">
+                        <i class="fas fa-code"></i>
+                        Start Generating Code
+                    </button>
+                    <button class="btn btn-large btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-buttons">
+                            <span class="btn-close"></span>
+                            <span class="btn-minimize"></span>
+                            <span class="btn-maximize"></span>
+                        </div>
+                        <div class="window-title">neural_network.py</div>
+                    </div>
+                    <div class="window-content">
+                        <pre><code class="language-python" id="heroCode"></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-subtitle">Everything you need to build, learn, and deploy AI solutions</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="feature-title">Machine Learning</h3>
+                    <p class="feature-description">
+                        Generate complete ML pipelines with scikit-learn, including preprocessing, 
+                        model training, hyperparameter tuning, and evaluation metrics.
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Classification & Regression</li>
+                        <li><i class="fas fa-check"></i> Ensemble Methods</li>
+                        <li><i class="fas fa-check"></i> Feature Engineering</li>
+                        <li><i class="fas fa-check"></i> Model Optimization</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="feature-title">Deep Learning</h3>
+                    <p class="feature-description">
+                        Create neural networks with TensorFlow, PyTorch, and Keras. From CNNs to 
+                        Transformers, generate state-of-the-art architectures.
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> CNN & RNN Architectures</li>
+                        <li><i class="fas fa-check"></i> Transfer Learning</li>
+                        <li><i class="fas fa-check"></i> Custom Model Training</li>
+                        <li><i class="fas fa-check"></i> Model Deployment</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="feature-title">NLP Processing</h3>
+                    <p class="feature-description">
+                        Build advanced NLP applications with NLTK, spaCy, and Transformers. 
+                        Sentiment analysis, chatbots, and text generation made easy.
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Text Classification</li>
+                        <li><i class="fas fa-check"></i> Named Entity Recognition</li>
+                        <li><i class="fas fa-check"></i> Language Translation</li>
+                        <li><i class="fas fa-check"></i> Question Answering</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Reinforcement Learning</h3>
+                    <p class="feature-description">
+                        Implement RL algorithms from Q-Learning to PPO. Train agents for 
+                        games, robotics, and optimization problems.
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Q-Learning & DQN</li>
+                        <li><i class="fas fa-check"></i> Policy Gradient Methods</li>
+                        <li><i class="fas fa-check"></i> Multi-Agent Systems</li>
+                        <li><i class="fas fa-check"></i> Gym Environments</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="feature-title">DSA Problem Solver</h3>
+                    <p class="feature-description">
+                        Solve data structures and algorithms problems with optimal solutions. 
+                        Get explanations, time complexity, and multiple approaches.
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Array & String Problems</li>
+                        <li><i class="fas fa-check"></i> Trees & Graphs</li>
+                        <li><i class="fas fa-check"></i> Dynamic Programming</li>
+                        <li><i class="fas fa-check"></i> System Design</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="feature-title">Web Development</h3>
+                    <p class="feature-description">
+                        Generate full-stack web applications with React, Node.js, Django, and Flask. 
+                        RESTful APIs, databases, and responsive UIs included.
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Frontend Frameworks</li>
+                        <li><i class="fas fa-check"></i> Backend APIs</li>
+                        <li><i class="fas fa-check"></i> Database Integration</li>
+                        <li><i class="fas fa-check"></i> Authentication Systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Generator Section -->
+    <section class="generator-section" id="generator">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">AI Code Generator</h2>
+                <p class="section-subtitle">Describe what you want to build, and let AI do the rest</p>
+            </div>
+
+            <div class="generator-container">
+                <!-- Category Selection -->
+                <div class="category-selector">
+                    <button class="category-btn active" data-category="ml" onclick="selectCategory('ml')">
+                        <i class="fas fa-robot"></i>
+                        <span>Machine Learning</span>
+                    </button>
+                    <button class="category-btn" data-category="dl" onclick="selectCategory('dl')">
+                        <i class="fas fa-network-wired"></i>
+                        <span>Deep Learning</span>
+                    </button>
+                    <button class="category-btn" data-category="nlp" onclick="selectCategory('nlp')">
+                        <i class="fas fa-language"></i>
+                        <span>NLP</span>
+                    </button>
+                    <button class="category-btn" data-category="rl" onclick="selectCategory('rl')">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Reinforcement Learning</span>
+                    </button>
+                    <button class="category-btn" data-category="dsa" onclick="selectCategory('dsa')">
+                        <i class="fas fa-code"></i>
+                        <span>DSA Solver</span>
+                    </button>
+                    <button class="category-btn" data-category="web" onclick="selectCategory('web')">
+                        <i class="fas fa-globe"></i>
+                        <span>Web Dev</span>
+                    </button>
+                </div>
+
+                <!-- Input Panel -->
+                <div class="generator-grid">
+                    <div class="input-panel">
+                        <div class="panel-header">
+                            <h3><i class="fas fa-keyboard"></i> Input Requirements</h3>
+                        </div>
+                        <div class="panel-content">
+                            <div class="form-group">
+                                <label for="projectName">Project Name</label>
+                                <input type="text" id="projectName" class="form-input" placeholder="e.g., Image Classifier">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="projectDescription">Description</label>
+                                <textarea id="projectDescription" class="form-textarea" rows="4" placeholder="Describe what you want to build in detail..."></textarea>
+                            </div>
+
+                            <div class="form-group" id="mlOptions">
+                                <label>Model Type</label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="mlModel" value="classification" checked>
+                                        <span>Classification</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="mlModel" value="regression">
+                                        <span>Regression</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="mlModel" value="clustering">
+                                        <span>Clustering</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="dlOptions" style="display: none;">
+                                <label>Architecture</label>
+                                <select class="form-select">
+                                    <option>CNN (Convolutional Neural Network)</option>
+                                    <option>RNN (Recurrent Neural Network)</option>
+                                    <option>LSTM (Long Short-Term Memory)</option>
+                                    <option>Transformer</option>
+                                    <option>GAN (Generative Adversarial Network)</option>
+                                    <option>Autoencoder</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group" id="nlpOptions" style="display: none;">
+                                <label>NLP Task</label>
+                                <select class="form-select">
+                                    <option>Sentiment Analysis</option>
+                                    <option>Text Classification</option>
+                                    <option>Named Entity Recognition</option>
+                                    <option>Machine Translation</option>
+                                    <option>Question Answering</option>
+                                    <option>Text Summarization</option>
+                                    <option>Chatbot</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group" id="rlOptions" style="display: none;">
+                                <label>RL Algorithm</label>
+                                <select class="form-select">
+                                    <option>Q-Learning</option>
+                                    <option>Deep Q-Network (DQN)</option>
+                                    <option>Policy Gradient</option>
+                                    <option>Actor-Critic</option>
+                                    <option>PPO (Proximal Policy Optimization)</option>
+                                    <option>DDPG (Deep Deterministic Policy Gradient)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group" id="dsaOptions" style="display: none;">
+                                <label>Problem Type</label>
+                                <select class="form-select">
+                                    <option>Arrays</option>
+                                    <option>Strings</option>
+                                    <option>Linked Lists</option>
+                                    <option>Trees</option>
+                                    <option>Graphs</option>
+                                    <option>Dynamic Programming</option>
+                                    <option>Sorting & Searching</option>
+                                    <option>Backtracking</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group" id="webOptions" style="display: none;">
+                                <label>Framework</label>
+                                <select class="form-select">
+                                    <option>React + Node.js</option>
+                                    <option>Vue.js + Express</option>
+                                    <option>Django (Python)</option>
+                                    <option>Flask (Python)</option>
+                                    <option>FastAPI</option>
+                                    <option>Next.js</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Additional Features</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="includeComments" checked>
+                                        <span>Include Comments</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="includeTests">
+                                        <span>Include Unit Tests</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="includeDocumentation">
+                                        <span>Include Documentation</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="includeVisualization">
+                                        <span>Add Visualization</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-block" onclick="generateCode()">
+                                <i class="fas fa-magic"></i>
+                                Generate Code
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Output Panel -->
+                    <div class="output-panel">
+                        <div class="panel-header">
+                            <h3><i class="fas fa-file-code"></i> Generated Code</h3>
+                            <div class="panel-actions">
+                                <button class="icon-btn" onclick="copyCode()" title="Copy Code">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                                <button class="icon-btn" onclick="downloadCode()" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="icon-btn" onclick="shareCode()" title="Share">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="panel-content">
+                            <div class="code-tabs">
+                                <button class="code-tab active" onclick="switchTab('main')">main.py</button>
+                                <button class="code-tab" onclick="switchTab('utils')">utils.py</button>
+                                <button class="code-tab" onclick="switchTab('requirements')">requirements.txt</button>
+                                <button class="code-tab" onclick="switchTab('readme')">README.md</button>
+                            </div>
+                            <div class="code-output" id="codeOutput">
+                                <div class="placeholder-content">
+                                    <i class="fas fa-code fa-3x"></i>
+                                    <p>Your generated code will appear here</p>
+                                    <p class="placeholder-hint">Select a category and describe your project to get started</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Templates -->
+                <div class="quick-templates">
+                    <h3 class="templates-title">Quick Start Templates</h3>
+                    <div class="templates-grid">
+                        <div class="template-card" onclick="loadTemplate('image-classifier')">
+                            <div class="template-icon"><i class="fas fa-image"></i></div>
+                            <h4>Image Classifier</h4>
+                            <p>CNN-based image classification</p>
+                        </div>
+                        <div class="template-card" onclick="loadTemplate('sentiment-analysis')">
+                            <div class="template-icon"><i class="fas fa-smile"></i></div>
+                            <h4>Sentiment Analysis</h4>
+                            <p>Text sentiment detection</p>
+                        </div>
+                        <div class="template-card" onclick="loadTemplate('recommendation')">
+                            <div class="template-icon"><i class="fas fa-star"></i></div>
+                            <h4>Recommender System</h4>
+                            <p>Collaborative filtering</p>
+                        </div>
+                        <div class="template-card" onclick="loadTemplate('chatbot')">
+                            <div class="template-icon"><i class="fas fa-comments"></i></div>
+                            <h4>Chatbot</h4>
+                            <p>Conversational AI agent</p>
+                        </div>
+                        <div class="template-card" onclick="loadTemplate('object-detection')">
+                            <div class="template-icon"><i class="fas fa-vector-square"></i></div>
+                            <h4>Object Detection</h4>
+                            <p>YOLO-based detector</p>
+                        </div>
+                        <div class="template-card" onclick="loadTemplate('time-series')">
+                            <div class="template-icon"><i class="fas fa-chart-line"></i></div>
+                            <h4>Time Series</h4>
+                            <p>LSTM forecasting model</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section class="documentation-section" id="documentation">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Documentation & Guides</h2>
+                <p class="section-subtitle">Learn how to make the most of AI CodeGen Pro</p>
+            </div>
+            <div class="docs-grid">
+                <div class="doc-card">
+                    <div class="doc-icon"><i class="fas fa-book"></i></div>
+                    <h3>Getting Started</h3>
+                    <p>Quick introduction to using the platform and generating your first project</p>
+                    <a href="#" class="doc-link">Read Guide <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon"><i class="fas fa-video"></i></div>
+                    <h3>Video Tutorials</h3>
+                    <p>Step-by-step video guides for different types of projects</p>
+                    <a href="#" class="doc-link">Watch Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon"><i class="fas fa-code"></i></div>
+                    <h3>API Reference</h3>
+                    <p>Complete API documentation for programmatic access</p>
+                    <a href="#" class="doc-link">View API Docs <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Best Practices</h3>
+                    <p>Tips and tricks for writing better prompts and generating optimal code</p>
+                    <a href="#" class="doc-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About AI CodeGen Pro</h2>
+                    <p>AI CodeGen Pro is a cutting-edge platform that leverages advanced artificial intelligence 
+                    to generate production-ready code across multiple domains. Whether you're building machine learning 
+                    models, deep learning architectures, NLP applications, or solving complex DSA problems, our AI 
+                    understands your requirements and generates optimized, well-documented code.</p>
+                    <p>Built with state-of-the-art language models and trained on millions of code repositories, 
+                    AI CodeGen Pro helps developers, students, and researchers accelerate their development workflow 
+                    and focus on what matters most - building innovative solutions.</p>
+                    <div class="tech-stack">
+                        <h3>Powered By</h3>
+                        <div class="tech-icons">
+                            <div class="tech-item">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-brain"></i>
+                                <span>TensorFlow</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-fire"></i>
+                                <span>PyTorch</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-robot"></i>
+                                <span>scikit-learn</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-language"></i>
+                                <span>Transformers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="stats-card">
+                        <div class="stat-row">
+                            <div class="stat-item-large">
+                                <div class="stat-number-large">1M+</div>
+                                <div class="stat-label-large">Lines of Code Generated</div>
+                            </div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-item-large">
+                                <div class="stat-number-large">5000+</div>
+                                <div class="stat-label-large">Active Users</div>
+                            </div>
+                        </div>
+                        <div class="stat-row">
+                            <div class="stat-item-large">
+                                <div class="stat-number-large">95%</div>
+                                <div class="stat-label-large">Satisfaction Rate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-brain"></i>
+                        <span>AI CodeGen<span class="logo-accent">Pro</span></span>
+                    </div>
+                    <p class="footer-description">
+                        Empowering developers with AI-powered code generation for machine learning, 
+                        deep learning, NLP, and beyond.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#generator">Code Generator</a></li>
+                        <li><a href="#documentation">Documentation</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">API Access</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Changelog</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI CodeGen Pro. All rights reserved. Made with <i class="fas fa-heart"></i> for developers worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spi
+            inner"></div>
+            <p class="loading-text">Generating your code...</p>
+            <p class="loading-subtext">This may take a few seconds</p>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Code copied to clipboard!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
